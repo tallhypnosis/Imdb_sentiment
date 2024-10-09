@@ -3,6 +3,7 @@ import joblib
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import nltk
+from sklearn.feature_extraction.text import TfidfVectorizer as tfidf
 
 nltk.download('punkt')
 nltk.download('stopwords')
