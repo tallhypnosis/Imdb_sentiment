@@ -22,7 +22,7 @@ def lemmatize_text(text):
     return ' '.join([WordNetLemmatizer().lemmatize(word) for word in text.split()])
 
 # Load the model and vectorizer
-model = joblib.load('best_logistic_model.pkl')
+model = joblib.load('best_log_model.pkl')
 vectorizer = joblib.load('tfidf_vectorizer.pkl')
 
 # Function to predict on new data
