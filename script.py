@@ -8,6 +8,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
+nltk.download('punkt_tab')
 
 # Preprocessing function
 def preprocess_text(text):
