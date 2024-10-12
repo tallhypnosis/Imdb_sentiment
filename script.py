@@ -25,12 +25,13 @@ def lemmatize_text(text):
 
 # Load the model and vectorizer
 model = joblib.load('best_log_model.pkl')
+vectorizer = joblib.load('tfidf_vectorizer.pkl')
 
 # Function to predict on new data
 def predict_new_text(text):
     processed_text = preprocess_text(text)
     lemmatized_text = lemmatize_text(processed_text)
-    vectorized_text = tfidf.transform([lemmatized_text])
+    vectorized_text = vectorizer.transform([lemmatized_text])
     prediction = model.predict(vectorized_text)
     return prediction[0]
 
